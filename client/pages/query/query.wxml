@@ -1,0 +1,7 @@
+<!--query.wxml-->
+<view class="container">
+  <view class="view.title">
+     <view>
+     </view>
+  </view>
+</view>

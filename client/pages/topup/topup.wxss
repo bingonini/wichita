@@ -1,0 +1,25 @@
+.view-userinfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view-topupType {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input{
+  border: solid 1px #c6c6c6;
+  width: 100%;
+  padding: 5rpx 5rpx;
+  
+}
+
+.input-placeholder{
+  text-align: center;
+}
+

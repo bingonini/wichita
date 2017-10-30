@@ -1,0 +1,16 @@
+{
+  "name": "WICHITA_PHONE_PAY",
+  "version": "1.0.0",
+  "description": "WICHITA充值中心",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bingonini/wichita.git"
+  },
+  "keywords": [],
+  "author": "bingonini",
+  "license": "BSD",
+  "dependencies": {
+    "wafer2-client-sdk": "^1.0.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "pages":[
+    "pages/topup/topup",
+    "pages/query/query"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#1666c9",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "WICHITA充值中心",
+    "backgroundTextStyle":"dark"
+  },
+  "tabBar":{
+    "color": "#dddddd",
+    "selectedColor": "#09bb07",
+    "backgroundColor": "#ffffff",
+    "borderstyle": "white",
+    "list": [{
+      "pagePath": "pages/topup/topup",
+      "text": "充值"
+    },
+    {
+      "pagePath": "pages/query/query",
+      "text": "查询"
+    }]
+  }
+}
