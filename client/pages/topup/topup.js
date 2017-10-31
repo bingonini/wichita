@@ -4,9 +4,6 @@ const app = getApp()
 
 Page({
   data: {
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     topupType: [
       { name: 'Metfone', value: '1' },
       { name: 'Cellcard', value: '2' },
@@ -19,7 +16,8 @@ Page({
       { name: '10元', value: '10' },
       { name: '20元', value: '20' },
       { name: '50元', value: '50' }
-    ]
+    ],
+    tips: ""
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -85,25 +83,29 @@ Page({
     this.setData(changed);
   },
   topupConfirm: function () {
+    var changed = {};
+
     if (!this.data.selectedType) {
-      wx.showToast({
-        title : "请选择充值类型"
-      });
+      changed['tips'] = "请选择充值类型";
+      this.setData(changed);
       return;
     }
     if (!this.data.selectedAmount) {
-      wx.showToast({
-        title : "请选择充值金额"
-      });
+      changed['tips'] = "请选择充值金额";
+      this.setData(changed);
+      // wx.showToast({
+      //   title : "请选择充值金额"
+      // });
       return;
     }
     if (!this.data.topupPhone){
-      wx.showToast({
-        title : "请填写电话号码"
-      });
+      changed['tips'] = "请填写电话号码";
+      this.setData(changed);
       return;
     }
 
+    changed["tips"] = "";
+    this.setData(changed);
     // TODO :refill
   }
 })

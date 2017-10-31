@@ -30,4 +30,7 @@
   <view class="view-segment">
     <button class="btn btn-block btn-primary" bindtap="topupConfirm">确认充值</button>
   </view>
+  <view class="view-segment">
+    <label class="tips-error">{{tips}}</label>
+  </view>
 </view>

@@ -9,6 +9,8 @@
   box-sizing: border-box;
 }
 
+
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -86,4 +88,12 @@
   background-color: #0062cc;
   border-color: #005cbf;
   /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);  */
+}
+
+
+
+.tips-error{
+  width: 100%;
+  text-align: center;
+  color: red;
 }
