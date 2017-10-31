@@ -8,7 +8,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     topupType: [
-      { name: 'Metfone', value: '1', checked: 'true' },
+      { name: 'Metfone', value: '1' },
       { name: 'Cellcard', value: '2' },
       { name: 'Smart', value: '3' }
     ],
@@ -58,9 +58,31 @@ Page({
   },
   topupTypeChange: function (e) {
     this.data.selectedType = e.detail.value;
+    var changed = {};
+
+    for (var i = 0; i < this.data.topupType.length; i++) {
+      if (this.data.selectedType && this.data.selectedType === this.data.topupType[i].value) {
+        changed['topupType[' + i + '].checked'] = true
+      } else {
+        changed['topupType[' + i + '].checked'] = false
+      }
+    }
+
+    this.setData(changed);
   },
   topupAmountChange: function (e) {
     this.data.selectedAmount = e.detail.value;
+    var changed = {};
+
+    for (var i = 0; i < this.data.topupAmount.length; i++) {
+      if (this.data.selectedAmount && this.data.selectedAmount === this.data.topupAmount[i].value) {
+        changed['topupAmount[' + i + '].checked'] = true
+      } else {
+        changed['topupAmount[' + i + '].checked'] = false
+      }
+    }
+
+    this.setData(changed);
   },
   topupConfirm: function () {
     if (!this.data.selectedType) {

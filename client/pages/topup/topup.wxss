@@ -64,6 +64,13 @@
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }  */
 
+.btn-topup-primary-active {
+  color: #fff;
+  background-color: #1E90FF;
+  border-color: #1E90FF;
+  /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);   */
+}
+
 .btn-topup-primary:not([disabled]):not(.disabled):active, .btn-topup-primary:not([disabled]):not(.disabled).active,
 .show > .btn-topup-primary.dropdown-toggle {
   color: #fff;

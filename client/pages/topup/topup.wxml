@@ -7,7 +7,7 @@
     </block>
   </view> -->
   <radio-group bindchange="topupTypeChange" class="view-segment">
-    <view wx:for="{{topupType}}" wx:key="value" class=" option-group btn btn-primary">
+    <view wx:for="{{topupType}}" wx:key="value" class=" option-group btn btn-primary btn-primary{{item.checked ? '-active': ''}}">
       <label>
         <radio id="{{item.name}}" hidden value="{{item.value}}" checked="{{item.checked}}"></radio>
         <text>{{item.name}}</text>
@@ -19,7 +19,7 @@
   </view>
   <!-- <view class="view-segment"> -->
   <radio-group bindchange="topupAmountChange" class="view-segment-wrap">
-    <view wx:for="{{topupAmount}}" wx:key="value" class="option-group-wrap btn-topup btn-topup-primary">
+    <view wx:for="{{topupAmount}}" wx:key="value" class="option-group-wrap btn-topup btn-topup-primary{{item.checked ? '-active': ''}}">
       <label>
         <radio id="{{item.name}}" hidden value="{{item.value}}" checked="{{item.checked}}"></radio>
         <text>{{item.name}}</text>
