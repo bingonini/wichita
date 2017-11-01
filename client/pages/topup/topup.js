@@ -66,6 +66,10 @@ Page({
       }
     }
 
+    if (this.data.tips && this.data.tips === "请选择充值类型") {
+      changed["tips"] = "";
+    }
+
     this.setData(changed);
   },
   topupAmountChange: function (e) {
@@ -80,7 +84,20 @@ Page({
       }
     }
 
+    if (this.data.tips && this.data.tips === "请选择充值金额"){
+      changed["tips"] = "";
+    }
+
     this.setData(changed);
+  },
+  topupPhoneInput: function (e) {
+    if (e.detail.value && e.detail.value !== ""){
+      if (this.data.tips && this.data.tips === "请填写电话号码") {
+        var changed = {};
+        changed["tips"] = "";
+        this.setData(changed);
+      }
+    }
   },
   topupConfirm: function () {
     var changed = {};

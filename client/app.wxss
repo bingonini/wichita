@@ -97,3 +97,11 @@
   text-align: center;
   color: red;
 }
+
+.tips-info{
+  width: 100%;
+  font-size: 0.75rem;
+  text-align: left;
+  color: #888888;
+  padding: 20rpx 25rpx;
+}

@@ -14,9 +14,6 @@
       </label>
     </view>
   </radio-group>
-  <view class="view-segment">
-    <input type="number" class="input" placeholder-class="input-placeholder" placeholder="输入电话号码" />
-  </view>
   <!-- <view class="view-segment"> -->
   <radio-group bindchange="topupAmountChange" class="view-segment-wrap">
     <view wx:for="{{topupAmount}}" wx:key="value" class="option-group-wrap btn-topup btn-topup-primary{{item.checked ? '-active': ''}}">
@@ -28,9 +25,19 @@
   </radio-group>
   <!-- </view> -->
   <view class="view-segment">
+    <input type="number" bindinput="topupPhoneInput" class="input" placeholder-class="input-placeholder" placeholder="输入电话号码" />
+  </view>
+  <view class="view-segment">
     <button class="btn btn-block btn-primary" bindtap="topupConfirm">确认充值</button>
   </view>
   <view class="view-segment">
     <label class="tips-error">{{tips}}</label>
+  </view>
+   <view class="view-segment">
+    <label class="tips-info"><text>温馨提示：
+1.本系统只能对柬埔寨手机充值，请您仔细核对电信运营商和手机号码，填写错误将无法退款；
+2.支付成功以后实时到账，充值高峰期可能会有所延迟；
+3.如果充值失败，支付金额会退回您的支付账户；
+4.7*24小时充值，如遇充值问题可以联系客服，客服工作时间（9:00-21:00）。</text></label>
   </view>
 </view>
