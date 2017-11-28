@@ -1,7 +1,26 @@
 <!--query.wxml-->
 <view class="container">
-  <view class="view.title">
-     <view>
-     </view>
-  </view>
+  <radio-group bindchange="queryTimeChange" class="view-segment">
+    <view wx:for="{{queryTime}}" wx:key="value" class="option-group btn btn-primary btn-primary{{item.checked ? '-active': ''}}">
+      <label>
+        <radio id="{{item.value}}" hidden value="{{item.value}}" checked="{{item.checked}}"></radio>
+        <text>{{item.text}}</text>
+      </label>
+    </view>
+  </radio-group>
+   <view wx:for="{{topupRecord}}" wx:key="topupOn" class="view-segment-wrap">
+      <view class="option-group-key">
+        <label>
+          <text>充值时间 : {{item.topupOn}}</text>
+        </label>
+      </view>
+      <view class="option-group-value">
+        <label style="padding:0rpx 20rpx 0rpx 0rpx">
+          <text>电话号码 : {{item.phoneNumber}}</text>
+        </label>
+        <label style="padding:0rpx 0rpx 0rpx 10rpx">
+          <text>充值金额 : {{item.topupAmount}}</text>
+        </label>
+      </view>
+    </view>
 </view>

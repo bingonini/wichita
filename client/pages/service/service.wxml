@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="view-segment">
+    <textarea style="width:100%" placeholder="清输入您的问题或建议，我们将会尽快给您回复，谢谢！" auto-focus />
+  </view>
+  <view class="view-segment">
+    <button class="btn btn-block btn-primary" bindtap="serviceConfirm">提交</button>
+  </view>
+</view>

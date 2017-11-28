@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/topup/topup",
-    "pages/query/query"
+    "pages/query/query",
+    "pages/service/service"
   ],
   "window":{
     "navigationBarBackgroundColor": "#1666c9",
@@ -21,6 +22,10 @@
     {
       "pagePath": "pages/query/query",
       "text": "查询"
+    },
+    {
+      "pagePath": "pages/service/service",
+      "text": "服务"
     }]
   }
 }

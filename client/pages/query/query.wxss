@@ -1,0 +1,35 @@
+.view-segment {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.view-segment-wrap {
+  width: 100%;
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.option-group {
+  flex:1;
+  text-align:center;
+  padding: 25rpx 0;
+}
+
+.option-group-key {
+  text-align:left;
+  padding: 10rpx 10rpx 0rpx 10rpx;
+  margin: 10rpx 0 0rpx 0;
+  flex-basis: 100%;
+}
+
+.option-group-value {
+  text-align:left;
+  padding: 0rpx 10rpx 0rpx 10rpx;
+  flex-basis: 100%;
+}

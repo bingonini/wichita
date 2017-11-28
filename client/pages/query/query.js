@@ -1,42 +1,29 @@
 Page({
   data: {
-    topupType: [
-      { name: 'Metfone', value: '1', checked: 'true' },
-      { name: 'Cellcard', value: '2' },
-      { name: 'Smart', value: '3' }
+    queryTime: [
+      { text: '最近一周', value: '1', checked: 'true'},
+      { text: '最近一月', value: '2' },
+      { text: '所有记录', value: '3' },
     ],
-    topupAmount: [
-      { name: '1元', value: '1' },
-      { name: '2元', value: '2' },
-      { name: '5元', value: '5' },
-      { name: '10元', value: '10' },
-      { name: '20元', value: '20' },
-      { name: '50元', value: '50' }
+    selectedQueryTime : "1",
+    topupRecord: [
+      { phoneNumber: '13858002413', topupOn: '2017-11-17 17:13:00', topupAmount: '5', topupStatus: '1' },
+      { phoneNumber: '13858002411', topupOn: '2017-11-13 12:13:00', topupAmount: '2', topupStatus: '1' },
+      { phoneNumber: '13858002411', topupOn: '2017-09-07 21:31:00', topupAmount: '1', topupStatus: '1' },
     ]
   },
-  topupTypeChange: function (e) {
-    data.selectedType = e.detail.value;
-  },
-  topupAmountChange: function (e) {
-    data.selectedAmount = e.detail.value;
-  },
-  topupConfirm: function () {
-    if (!data.selectedType) {
-      wx.showToast({
-        title: "请选择充值类型"
-      });
-    }
-    if (!data.selectedAmount) {
-      wx.showToast({
-        title: "请选择充值金额"
-      });
-    }
-    if (!data.topupPhone) {
-      wx.showToast({
-        title: "请填写电话号码"
-      });
+  queryTimeChange: function (e) {
+    this.data.selectedQueryTime = e.detail.value;
+    var changed = {};
+
+    for (var i = 0; i < this.data.queryTime.length; i++) {
+      if (this.data.queryTime && this.data.queryTime === this.data.queryTime[i].value) {
+        changed['queryTime[' + i + '].checked'] = true
+      } else {
+        changed['queryTime[' + i + '].checked'] = false
+      }
     }
 
-    // TODO :refill
+    this.setData(changed);
   }
 })
